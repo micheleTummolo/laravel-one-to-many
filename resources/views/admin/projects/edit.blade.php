@@ -25,6 +25,15 @@
                     <label class="form-label">Nome</label>
                     <input type="text" name="name" class="form-control" placeholder="" value="{{ old('title') ?? $project->name }}">
                 </div>
+                <div class="col-md-6">
+                    <label class="form-label">Tipo</label>
+                    <select class="form-select" name="type_id" id="type_id" aria-label="Default select example">
+                        <option value="">Seleziona il tipo</option>
+                        @foreach($types as $type)
+                        <option value="{{ $type->id }}"  {{ $type->id == old('type_id', $project->type_id) ? 'selected' : '' }} >{{ $type->type }}</option>
+                        @endforeach
+                    </select>
+                </div>
                 <div class="col-12">
                     <label class="form-label">Descrizione</label>
                     <textarea class="form-control" name="description" rows="8">{{ old('description') ?? $project->description }}</textarea>
