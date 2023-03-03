@@ -28,7 +28,7 @@
                 <div class="col-md-6">
                     <label class="form-label">Tipo</label>
                     <select class="form-select" name="type_id" id="type_id" aria-label="Default select example">
-                        <option selected>Seleziona il tipo</option>
+                        <option value="" selected>Seleziona il tipo</option>
                         @foreach($types as $type)
                         <option value="{{ $type->id }}">{{ $type->type }}</option>
                         @endforeach

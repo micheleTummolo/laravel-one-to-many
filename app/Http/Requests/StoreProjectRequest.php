@@ -41,6 +41,7 @@ class StoreProjectRequest extends FormRequest
             'name.required' => 'Il nome è richiesto',
             'name.unique' => 'E\' già presente un progetto con questo nome',
             'name.max' => 'Il nome non può essere lungo più di :max caratteri',
+            'type_id.exsists' => 'Tipo selezionato non valido'
         ];
     }
 }
