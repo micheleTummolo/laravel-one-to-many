@@ -25,6 +25,15 @@
                     <label class="form-label">Nome</label>
                     <input type="text" name="name" class="form-control" placeholder="">
                 </div>
+                <div class="col-md-6">
+                    <label class="form-label">Tipo</label>
+                    <select class="form-select" name="type_id" id="type_id" aria-label="Default select example">
+                        <option selected>Seleziona il tipo</option>
+                        @foreach($types as $type)
+                        <option value="{{ $type->id }}">{{ $type->type }}</option>
+                        @endforeach
+                    </select>
+                </div>
                 <div class="col-12">
                     <label class="form-label">Descrizione</label>
                     <textarea class="form-control" name="description" rows="8"></textarea>
