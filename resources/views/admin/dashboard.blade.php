@@ -7,10 +7,10 @@
     </h1>
     <div class="row justify-content-center">
         <div class="col">
-            <div class="card">
-                <div class="card-header">{{ __('User Dashboard') }}</div>
+            <div class="card background_dark_2">
+                <div class="card-header text-white">{{ __('User Dashboard') }}</div>
 
-                <div class="card-body">
+                <div class="card-body text-white">
                     @if (session('status'))
                     <div class="alert alert-success" role="alert">
                         {{ session('status') }}

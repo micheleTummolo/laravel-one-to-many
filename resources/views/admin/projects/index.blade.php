@@ -17,10 +17,10 @@
             {{session('message')}}
         </div>
         @endif
-        <div class="col-12 my-3 bg-white border_radius_50 table_container">
-            <table class="table table-striped">
+        <div class="col-12 my-3 background_dark_2 border_radius_50 table_container">
+            <table class="table">
                 <thead>
-                    <tr>
+                    <tr class="text-white">
                         <th scope="col">Id</th>
                         <th scope="col">Nome</th>
                         <th scope="col">Slug</th>
@@ -29,7 +29,7 @@
                 </thead>
                 <tbody>
                 @foreach($projects as $project)
-                    <tr>
+                    <tr class="text-white">
                         <td>{{ $project['id']}}</td>
                         <td>{{ $project['name']}}</td>
                         <td>{{ $project['slug']}}</td>

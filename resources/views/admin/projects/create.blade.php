@@ -17,16 +17,16 @@
                 </div>
         </div>
         @endif
-        <div class="col-12 bg-white border_radius_50 table_container">
+        <div class="col-12 background_dark_2 border_radius_50 table_container">
             <form action="{{ route('admin.projects.store') }}" method="POST" class="row g-3">
                 @csrf
 
                 <div class="col-md-6">
-                    <label class="form-label">Nome</label>
+                    <label class="form-label text-white">Nome</label>
                     <input type="text" name="name" class="form-control" placeholder="">
                 </div>
                 <div class="col-md-6">
-                    <label class="form-label">Tipo</label>
+                    <label class="form-label text-white">Tipo</label>
                     <select class="form-select" name="type_id" id="type_id" aria-label="Default select example">
                         <option value="" selected>Seleziona il tipo</option>
                         @foreach($types as $type)
@@ -35,7 +35,7 @@
                     </select>
                 </div>
                 <div class="col-12">
-                    <label class="form-label">Descrizione</label>
+                    <label class="form-label text-white">Descrizione</label>
                     <textarea class="form-control" name="description" rows="8"></textarea>
                 </div>
                 
