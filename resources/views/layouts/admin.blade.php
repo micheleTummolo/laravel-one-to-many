@@ -25,13 +25,24 @@
 <body>
     <div id="app">
 
-        <header class="navbar flex-md-nowrap p-2 background_dark border_bottom">
-            <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/">BoolPress</a>
-            <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <input class="form-control form-control-dark w-100" type="text" Placeholder="Search">
-            
+        <header class="navbar flex-md-nowrap background_dark border_bottom">
+            <div class="header_container w-100 d-flex justify-content-between">
+                <div class="col-1">
+                    <a class="col-md-3 col-lg-2 nav_logo" href="/">BoolPress</a>
+                </div>
+                <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="col-6">
+                    <input class="form-control form-control-dark w-100" type="text" Placeholder="Search">
+                </div>
+                <div class="col-1">
+                    <div class="w-100 d-flex justify-content-end">
+                        <a href="#" class="nav_icon"><i class="fa-solid fa-circle-user fa-lg fa-fw"></i></a>
+                        <a href="#" class="nav_icon"><i class="fa-solid fa-bell fa-lg fa-fw"></i></a>
+                    </div>
+                </div>
+            </div>
         </header>
         <div class="container-fluid">
             <div class="row h-100">
