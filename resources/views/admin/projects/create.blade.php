@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row my-4">
         <div calss="col-12">
-            <h2 class="mb-4">Aggiungi un nuovo progetto</h2>
+            <h2 class="text-white mb-5">Aggiungi un nuovo progetto</h2>
         </div>
         @if($errors->any())
         <div class="col-12">
@@ -17,7 +17,7 @@
                 </div>
         </div>
         @endif
-        <div class="col-12">
+        <div class="col-12 bg-white border_radius_50 table_container">
             <form action="{{ route('admin.projects.store') }}" method="POST" class="row g-3">
                 @csrf
 
