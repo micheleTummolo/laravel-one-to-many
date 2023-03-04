@@ -25,48 +25,56 @@
 <body>
     <div id="app">
 
-        <header class="navbar sticky-top flex-md-nowrap p-2 background_dark border_bottom">
+        <header class="navbar flex-md-nowrap p-2 background_dark border_bottom">
             <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/">BoolPress</a>
             <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <input class="form-control form-control-dark w-100" type="text" Placeholder="Search">
-            <div class="navbar nav">
-                <div class="nav-item text-nowrap ms-2">
-                    <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                </div>
-            </div>
+            
         </header>
-        <div class="container-fluid vh-100">
+        <div class="container-fluid">
             <div class="row h-100">
-                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block collapse p-0 pt-3 background_dark border_right">
+                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-flex collapse p-0 pt-3 flex-column justify-content-between background_dark border_right main_container">
+                    <!-- Sidebar top -->    
                     <div class="position-sticky">
-                        <div class="logo_container border_bottom d-flex justify-content-center">
-                            <div class="logo_circle">
-                                <img src="{{ Vite::asset('resources/img/logo.png')}}" alt="logo-png">
+                            <div class="logo_container border_bottom d-flex justify-content-center">
+                                <div class="logo_circle">
+                                    <img src="{{ Vite::asset('resources/img/logo.png')}}" alt="logo-png">
+                                </div>
+                            </div>
+                            <ul class="d-flex flex-column align-items-center mt-5 p-0">
+                                <li class="text-left sidebar_link {{ Route::currentRouteName() == 'admin.dashboard' ? 'sidebar_selected' : '' }}">
+                                    <a class="text-white text-decoration-none w-100" href="{{route('admin.dashboard')}}">
+                                        <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Dashboard
+                                    </a>
+                                </li>
+                                <li class="text-left mt-3 sidebar_link {{ Route::currentRouteName() == 'admin.projects.index' ? 'sidebar_selected' : '' }}">
+                                    <a class="text-white text-decoration-none w-100" href="{{route('admin.projects.index') }}">
+                                        <i class="fa-solid fa-newspaper fa-lg fa-fw"></i> Posts
+                                    </a>
+                                </li>
+
+                            </ul>
+                    </div>
+
+                    <!-- Sidebar bottom -->
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="w-50 border_bottom">
+    
+                        </div>    
+                        <div class="sidebar_bottom w-100 d-flex justify-content-center">
+                            <div class="sidebar_link">
+                                <a class="text-danger w-100" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                    <i class="fa-solid fa-right-from-bracket fa-lg fa-fw me-1"></i>
+                                    {{ __('Logout') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
                             </div>
                         </div>
-                        <ul class="d-flex flex-column align-items-center mt-5 p-0">
-                            <li class="text-left sidebar_link {{ Route::currentRouteName() == 'admin.dashboard' ? 'sidebar_selected' : '' }}">
-                                <a class="text-white text-decoration-none w-100" href="{{route('admin.dashboard')}}">
-                                    <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Dashboard
-                                </a>
-                            </li>
-                            <li class="text-left mt-3 sidebar_link {{ Route::currentRouteName() == 'admin.projects.index' ? 'sidebar_selected' : '' }}">
-                                <a class="text-white text-decoration-none w-100" href="{{route('admin.projects.index') }}">
-                                    <i class="fa-solid fa-newspaper fa-lg fa-fw"></i> Posts
-                                </a>
-                            </li>
-
-                        </ul>
-
-
                     </div>
                 </nav>
 

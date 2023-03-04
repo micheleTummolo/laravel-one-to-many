@@ -1,6 +1,19 @@
 @use 'partials/sidebar';
 @import '~bootstrap/scss/bootstrap';
 
+header {
+    height: 8vh;
+}
+
+.main_container {
+    height: 92vh;
+}
+
+main {
+    height: 92vh;
+    overflow: auto;
+}
+
 .background_dark {
     background-color: #1B1B1B;
 }
@@ -11,4 +24,12 @@
 
 .border_right {
     border-right: 2px solid #2B2B2B;
+}
+
+.border_top {
+    border-top: 2px solid #2B2B2B;
+}
+
+a {
+    text-decoration: none;
 }
