@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-12 my-4 d-flex justify-content-between">
             <div>
-                <h2>Elenco progetti</h2>
+                <h2 class="text-white fw-bolder">Elenco progetti</h2>
             </div>
             <div>
                 <a class="btn btn-sm btn-primary" href="{{ route('admin.projects.create') }}" role="button">Aggiungi progetto</a>
@@ -17,13 +17,14 @@
             {{session('message')}}
         </div>
         @endif
-        <div class="col-12 my-3">
+        <div class="col-12 my-3 bg-white border_radius_50 table_container">
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
                         <th scope="col">Nome</th>
                         <th scope="col">Slug</th>
+                        <th scope="col">Azioni</th>
                     </tr>
                 </thead>
                 <tbody>

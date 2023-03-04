@@ -26,7 +26,7 @@
     <div id="app">
 
         <header class="navbar flex-md-nowrap background_dark border_bottom">
-            <div class="header_container w-100 d-flex justify-content-between">
+            <div class="header_container w-100 d-flex justify-content-between align-items-center">
                 <div class="col-1">
                     <a class="col-md-3 col-lg-2 nav_logo" href="/">BoolPress</a>
                 </div>
@@ -62,7 +62,7 @@
                                 </li>
                                 <li class="text-left mt-3 sidebar_link {{ Route::currentRouteName() == 'admin.projects.index' ? 'sidebar_selected' : '' }}">
                                     <a class="text-white text-decoration-none w-100" href="{{route('admin.projects.index') }}">
-                                        <i class="fa-solid fa-newspaper fa-lg fa-fw"></i> Posts
+                                        <i class="fa-solid fa-newspaper fa-lg fa-fw"></i> Projects
                                     </a>
                                 </li>
 
